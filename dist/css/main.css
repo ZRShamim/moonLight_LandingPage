@@ -18,12 +18,29 @@ li {
   padding: 3rem 2rem; }
   .container .navbar {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    z-index: 100; }
     .container .navbar .logo {
       font-size: 3rem;
       font-family: "Nunito", sans-serif;
       color: whitesmoke;
       cursor: pointer; }
+    .container .navbar .navlist {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: rgba(85, 85, 85, 0.966);
+      color: whitesmoke;
+      text-align: center;
+      border-bottom-right-radius: 2rem;
+      border-top-left-radius: 2rem;
+      padding: 2rem 2rem;
+      top: 7rem;
+      right: 5%; }
+      .container .navbar .navlist li {
+        font-size: 2.5rem;
+        padding: 1.5rem 3.5rem;
+        cursor: pointer; }
     .container .navbar .hidden {
       display: none; }
     .container .navbar i {
@@ -58,9 +75,15 @@ li {
         color: whitesmoke; }
 
 @media screen and (min-width: 840px) {
-  .container .navbar .navlist {
-    color: whitesmoke;
+  .container .navbar .hidden {
     display: flex; }
+  .container .navbar .navlist {
+    position: static;
+    color: whitesmoke;
+    flex-direction: row;
+    margin-top: 0;
+    padding: 0;
+    background: none; }
     .container .navbar .navlist li {
       font-size: 2rem;
       padding: 1rem 4rem;

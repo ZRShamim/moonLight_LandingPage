@@ -23,6 +23,7 @@ li {
   .navbar {
     display: flex;
     justify-content: space-between;
+    z-index: 100;
     .logo {
       font-size: 3rem;
       font-family: "Nunito", sans-serif;
@@ -30,24 +31,24 @@ li {
       cursor: pointer;
     }
 
-    // .navlist {
-    //   position: fixed;
-    //   display: flex;
-    //   flex-direction: column;
-    //   top: 70px;
-    //   left: 40%;
-    //   background: rgba(85, 85, 85, 0.966);
-    //   color: whitesmoke;
-    //   text-align: center;
-    //   border-bottom-right-radius: 2rem;
-    //   border-top-left-radius: 2rem;
-    //   padding: 2rem 2rem;
-    //   li {
-    //     font-size: 2.5rem;
-    //     padding: 1.5rem 3.5rem;
-    //     cursor: pointer;
-    //   }
-    // }
+    .navlist {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: rgba(85, 85, 85, 0.966);
+      color: whitesmoke;
+      text-align: center;
+      border-bottom-right-radius: 2rem;
+      border-top-left-radius: 2rem;
+      padding: 2rem 2rem;
+      top: 7rem;
+      right: 5%;
+      li {
+        font-size: 2.5rem;
+        padding: 1.5rem 3.5rem;
+        cursor: pointer;
+      }
+    }
 
     .hidden {
       display: none;
@@ -100,10 +101,16 @@ li {
 @media screen and (min-width: 840px) {
   .container {
     .navbar {
-      .navlist {
-        // position: static;
-        color: whitesmoke;
+      .hidden {
         display: flex;
+      }
+      .navlist {
+        position: static;
+        color: whitesmoke;
+        flex-direction: row;
+        margin-top: 0;
+        padding: 0;
+        background: none;
 
         li {
           font-size: 2rem;
